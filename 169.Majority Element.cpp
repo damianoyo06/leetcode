@@ -1,0 +1,16 @@
+//https://leetcode.com/problems/majority-element/description/
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int n= nums.size()-1;
+        unordered_map<int, int> count;
+
+        for(int num:nums){
+            count[num]++;
+            if(count[num] > n/2){
+                return num;
+            }
+        }
+        return 0;
+    }
+};
