@@ -1,0 +1,24 @@
+#!/bin/zsh
+
+for f in *.cpp; do
+  # match number dot space rest-of-filename
+  if [[ "$f" =~ ^([0-9]+)\.\ (.+)$ ]]; then
+    num="${match[1]}"        # captured number
+    rest="${match[2]}"       # rest of filename
+
+    # skip if number is empty
+    if [[ -z "$num" ]]; then
+      echo "Skipping $f (invalid number)"
+      continue
+    fi
+
+    # format number to 4 digits
+    new=$(printf "%04d. %s" "$num" "$rest")
+
+    # rename with git
+    if [[ "$f" != "$new" ]]; then
+      echo "Renaming: $f -> $new"
+      git mv "$f" "$new"
+    fi
+  else
+    e
