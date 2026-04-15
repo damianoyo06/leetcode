@@ -1,10 +1,10 @@
 # LeetCode Solutions
-This repository contains my solutions to daily LeetCode problems, with a current total of 200+ completed questions.
+This repository contains my solutions to daily LeetCode problems, with a current total of 250+ completed questions.
 
 # About
 Daily problem-solving practice
 Focus on improving data structures and algorithm skills
-Consistent progress with over 200 solved problems
+Consistent progress with over 250 solved problems
 
 All solutions are implemented in C++, with an emphasis on writing clean, efficient, and optimised code.
 
